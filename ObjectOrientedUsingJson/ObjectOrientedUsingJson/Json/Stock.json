@@ -1,0 +1,24 @@
+﻿{
+  "StocksList": [
+    {
+      "StockName": "HDFC",
+      "Shares": 11,
+      "Price": 110
+    },
+    {
+      "StockName": "Cisco",
+      "Shares": 1,
+      "Price": 50
+    },
+    {
+      "StockName": "Tata",
+      "Shares": 3,
+      "Price": 180
+    },
+    {
+      "StockName": "Wipro",
+      "Shares": 1,
+      "Price": 150
+    }
+  ]
+}
