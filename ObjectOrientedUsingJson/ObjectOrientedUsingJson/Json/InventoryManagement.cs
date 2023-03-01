@@ -5,20 +5,40 @@ namespace ObjectOrientedUsingJson.Json
 {
     public class InventoryManagement
     {
-        InventoryModel model = new InventoryModel();
-        List<InventoryModel> list = new List<InventoryModel>();
-        public void Convert(string jFilePath)
+        // InventoryModel model = new InventoryModel();
+        public void convert(string jFilePath)
         {
+            FactoryModel model = new FactoryModel();
+            List<InventoryModel> Rice;
+            List<InventoryModel> Wheat;
+            List<InventoryModel> Pulses;
+
             using (StreamReader file = new StreamReader(jFilePath))
             {
                 var json = file.ReadToEnd();
-                var items = JsonConvert.DeserializeObject<List<InventoryModel>>(json);
-                Console.WriteLine("Items   Price   Weight    TotalValue");
-                foreach (var objects in items)
+                FactoryModel item = JsonConvert.DeserializeObject<FactoryModel>(json);
+                Rice = item.Rice;
+                Wheat = item.Wheat;
+                Pulses = item.Pulses;
+                Console.WriteLine("Check:\n1.Rice\n2.Wheat\n3.Pulses");
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
                 {
-                    double value = objects.PricePerKg * objects.Weight;
-                    Console.WriteLine(objects.Name + "\t" + objects.Weight + "\t" + objects.PricePerKg + "\t\t" + (objects.Weight * objects.PricePerKg));
+                    case 1:
+                        foreach (var contact in Rice)
+                            Console.WriteLine(contact.Name + "-" + contact.Weight + "-" + contact.PricePerKg);
+                        break;
+                    case 2:
+                        foreach (var contact in Wheat)
+                            Console.WriteLine(contact.Name + "-" + contact.Weight + "-" + contact.PricePerKg);
+                        break;
+                    case 3:
+                        foreach (var contact in Pulses)
+                            Console.WriteLine(contact.Name + "-" + contact.Weight + "-" + contact.PricePerKg);
+                        break;
                 }
+
             }
         }
     }
