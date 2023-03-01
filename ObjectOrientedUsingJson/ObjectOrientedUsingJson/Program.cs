@@ -8,7 +8,7 @@ internal class Program
         Console.WriteLine("Welcome to Object Oriented Progrmming - JSON");
         while (true)
         {
-            Console.WriteLine("\n1.Inventory Data Management \n2.Inventory Management \n3.Stock Management \n4.Commercial Data Processing");
+            Console.WriteLine("\n1.Inventory Data Management \n2.Inventory Management \n3.Stock Management \n4.Commercial Data Processing \n5.Deck Of Card");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -116,6 +116,15 @@ internal class Program
                         Console.WriteLine("\nDo you want to continue?(Y/N)");
                         flag = Console.ReadLine();
                     }
+                    break;
+
+                case 5:
+                    //Method call to initialize a deck
+                    InitialDeck.InitializeDeck();
+                    //Method to shuffle and distribute cards
+                    ShuffleDeck.ShufflingDeck();
+                    //Create players object
+                    Players.MaintainPlayers();
                     break;
             }
         }
