@@ -1,0 +1,22 @@
+﻿{
+  "AccountList": [
+    {
+      "Stockholder": "Piyank",
+      "StockName": "Tata",
+      "shares": 1,
+      "Price": 180
+    },
+    {
+      "Stockholder": "Piyank",
+      "StockName": "Wipro",
+      "shares": 2,
+      "Price": 100
+    },
+    {
+      "Stockholder": "Piyank",
+      "StockName": "HDFC",
+      "shares": 3,
+      "Price": 110
+    }
+  ]
+}

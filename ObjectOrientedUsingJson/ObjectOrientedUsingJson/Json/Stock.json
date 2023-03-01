@@ -1,24 +1,29 @@
-﻿{
-  "StocksList": [
+{
+  "stocksList": [
     {
       "StockName": "HDFC",
-      "Shares": 11,
+      "shares": 11,
       "Price": 110
     },
     {
       "StockName": "Cisco",
-      "Shares": 1,
+      "shares": 1,
       "Price": 50
     },
     {
       "StockName": "Tata",
-      "Shares": 3,
+      "shares": 3,
       "Price": 180
     },
     {
       "StockName": "Wipro",
-      "Shares": 1,
+      "shares": 1,
       "Price": 150
+    },
+    {
+      "StockName": "HCL",
+      "shares": 5,
+      "Price": 232
     }
   ]
 }
